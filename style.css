@@ -1,0 +1,229 @@
+.desktop {
+  background-color: #ffffff;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop .HOME {
+  width: 1440px;
+  height: 111px;
+  display: flex;
+  background-color: #1b5e20;
+}
+
+.ellipse {
+  margin-left: 30px;
+  margin-top: 6px;
+  width: 100px;
+  height: 100px;
+
+}
+
+.ellipse2 {
+  margin-left: 30px;
+  margin-top: 6px;
+  width: 100px;
+  height: 100px;
+}
+
+
+.desktop .div {
+  margin-left: 28px;
+  margin-top: 26px;
+  width: 60px;
+  height: 60px;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+}
+
+
+.desktop .text-wrapper {
+  margin-top: 38px;
+  width: 215px;
+  height: 35px;
+  margin-left: 57px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-2 {
+  margin-top: 44px;
+  width: 105px;
+  height: 23px;
+  margin-left: 70px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-3 {
+  margin-top: 44px;
+  width: 105px;
+  height: 23px;
+  margin-left: 71px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-4 {
+  margin-top: 44px;
+  width: 77px;
+  height: 23px;
+  margin-left: 71px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.desktop .text-wrapper-5 {
+  margin-top: 44px;
+  width: 103px;
+  height: 23px;
+  margin-left: 71px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .text-wrapper-6 {
+  margin-top: 44px;
+  width: 134px;
+  height: 23px;
+  margin-left: 71px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .frame {
+  width: 1440px;
+  height: 913px;
+  position: relative;
+}
+
+.desktop .frame-2 {
+  position: absolute;
+  top: 822px;
+  left: 0;
+  width: 1440px;
+  height: 91px;
+  background-color: #1b5e20;
+}
+
+.desktop .text-wrapper-7 {
+  position: absolute;
+  top: calc(50.00% - 232px);
+  left: calc(50.00% - 454px);
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #00000066;
+  font-size: 90px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.desktop .p {
+  position: absolute;
+  top: 855px;
+  left: 474px;
+  opacity: 0.5;
+  font-family: "Roboto", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+/* ===== EFECTO DE TEXTO AL PASAR EL MOUSE ===== */
+.desktop .text-wrapper,
+.desktop .text-wrapper-2,
+.desktop .text-wrapper-3,
+.desktop .text-wrapper-4,
+.desktop .text-wrapper-5,
+.desktop .text-wrapper-6,
+.desktop .ellipse,
+.desktop .ellipse2 {
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.desktop .text-wrapper:hover,
+.desktop .text-wrapper-2:hover,
+.desktop .text-wrapper-3:hover,
+.desktop .text-wrapper-4:hover,
+.desktop .text-wrapper-5:hover,
+.desktop .text-wrapper-6:hover,
+.desktop .ellipse,
+.desktop .ellipse2 {
+  transform: scale(1.15);
+  color: #ffd700; /* Dorado */
+  text-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700;
+}
+
+
+/*Secciones de imagenes*/
+
+section{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+section img {
+width: 0px;
+flex-grow: 1;
+object-fit: cover;
+opacity: .8;
+transition: .5s ease;
+
+}
+
+section img:hover{
+cursor: crosshair;
+width: 75%;
+opacity: 1;
+
+}
+
+/*Quita lo feo de los links*/
+a{
+  color: inherit;
+  text-decoration: none;
+}
