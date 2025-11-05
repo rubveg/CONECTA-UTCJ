@@ -40,7 +40,7 @@
 }
 
 
-.desktop .text-wrapper {
+.desktop .text-wrapper-conecta {
   margin-top: 38px;
   width: 215px;
   height: 35px;
@@ -54,7 +54,7 @@
   white-space: nowrap;
 }
 
-.desktop .text-wrapper-2 {
+/*.desktop .text-wrapper-2 {
   margin-top: 44px;
   width: 105px;
   height: 23px;
@@ -66,9 +66,9 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
-}
+}*/
 
-.desktop .text-wrapper-3 {
+.desktop .text-wrapper-3-mapa {
   margin-top: 44px;
   width: 105px;
   height: 23px;
@@ -82,7 +82,7 @@
   white-space: nowrap;
 }
 
-.desktop .text-wrapper-4 {
+.desktop .text-wrapper-4-horarios {
   margin-top: 44px;
   width: 77px;
   height: 23px;
@@ -101,7 +101,7 @@ a{
   text-decoration: none;
 }
 
-.desktop .text-wrapper-5 {
+.desktop .text-wrapper-5-comunidad {
   margin-top: 44px;
   width: 103px;
   height: 23px;
@@ -115,7 +115,7 @@ a{
   white-space: nowrap;
 }
 
-.desktop .text-wrapper-6 {
+.desktop .text-wrapper-6-menu {
   margin-top: 44px;
   width: 134px;
   height: 23px;
@@ -129,13 +129,13 @@ a{
   white-space: nowrap;
 }
 
-.desktop .frame {
+.desktop .frame-fotter {
   width: 1440px;
   height: 913px;
   position: relative;
 }
 
-.desktop .frame-2 {
+.desktop .frame-2fotter {
   position: absolute;
   top: 822px;
   left: 0;
@@ -144,7 +144,7 @@ a{
   background-color: #1b5e20;
 }
 
-.desktop .text-wrapper-7 {
+/*.desktop .text-wrapper-7 {
   position: absolute;
   top: calc(50.00% - 232px);
   left: calc(50.00% - 454px);
@@ -156,7 +156,7 @@ a{
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
-}
+}*/
 
 .desktop .p {
   position: absolute;
@@ -173,23 +173,21 @@ a{
   white-space: nowrap;
 }
 /* ===== EFECTO DE TEXTO AL PASAR EL MOUSE ===== */
-.desktop .text-wrapper,
-.desktop .text-wrapper-2,
-.desktop .text-wrapper-3,
-.desktop .text-wrapper-4,
-.desktop .text-wrapper-5,
-.desktop .text-wrapper-6,
+.desktop .text-wrapper-conecta,
+.desktop .text-wrapper-3-mapa,
+.desktop .text-wrapper-4-horarios,
+.desktop .text-wrapper-5-comunidad,
+.desktop .text-wrapper-6-menu,
 .desktop .ellipse,
 .desktop .ellipse2 {
   transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
 }
 
-.desktop .text-wrapper:hover,
-.desktop .text-wrapper-2:hover,
-.desktop .text-wrapper-3:hover,
-.desktop .text-wrapper-4:hover,
-.desktop .text-wrapper-5:hover,
-.desktop .text-wrapper-6:hover,
+.desktop .text-wrapper-conecta:hover,
+.desktop .text-wrapper-3-mapa:hover,
+.desktop .text-wrapper-4-horarios:hover,
+.desktop .text-wrapper-5-comunidad:hover,
+.desktop .text-wrapper-6-menu:hover,
 .desktop .ellipse,
 .desktop .ellipse2 {
   transform: scale(1.15);
