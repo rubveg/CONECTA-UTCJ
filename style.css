@@ -1,13 +1,12 @@
 body{
 margin: 0;
 overflow-x: hidden;
-
 }
+
 .desktop {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  
 }
 
 .desktop .HOME {
@@ -23,7 +22,6 @@ overflow-x: hidden;
   margin-top: 6px;
   width: 100px;
   height: 100px;
-
 }
 
 .ellipse2 {
@@ -33,14 +31,12 @@ overflow-x: hidden;
   height: 150px;
 }
 
-
 .desktop .div {
   width: 60px;
   height: 60px;
   background-color: #d9d9d9;
   border-radius: 30px;
 }
-
 
 .desktop .text-wrapper-conecta {
   margin: 36px;
@@ -131,6 +127,7 @@ overflow-x: hidden;
   line-height: normal;
   white-space: nowrap;
 }
+
 /* ===== EFECTO DE TEXTO AL PASAR EL MOUSE ===== */
 .desktop .text-wrapper-conecta,
 .desktop .text-wrapper-3-mapa,
@@ -140,7 +137,6 @@ overflow-x: hidden;
 .desktop .p,
 .desktop .ellipse,
 .desktop .ellipse2 {
-
   transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
 }
 
@@ -157,9 +153,7 @@ overflow-x: hidden;
   text-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700;
 }
 
-
 /*Secciones de imagenes*/
-
 section{
   display: flex;
   width: 100%;
@@ -185,4 +179,12 @@ section img:hover{
 a{
   color: inherit;
   text-decoration: none;
+}
+
+
+/*grid seccion para horarios*/
+
+.grid{
+  grid-template-columns: 3fr;
+  background-color: #1b5e20;
 }
