@@ -1,10 +1,9 @@
-body{
-margin: 0;
-overflow-x: hidden;
+body {
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .desktop {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -16,6 +15,7 @@ overflow-x: hidden;
   width: 100%;
   background: linear-gradient(180deg, #1b5e20, #2f8b36);
 }
+
 
 .ellipse {
   margin-left: 10px;
@@ -149,12 +149,13 @@ overflow-x: hidden;
 .desktop .ellipse,
 .desktop .ellipse2 {
   transform: scale(1.15);
-  color: #ffd700; /* Dorado */
+  color: #ffd700;
+  /* Dorado */
   text-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700;
 }
 
 /*Secciones de imagenes*/
-section{
+section {
   display: flex;
   width: 100%;
   height: 90%;
@@ -168,7 +169,7 @@ section img {
   transition: .5s ease;
 }
 
-section img:hover{
+section img:hover {
   transition-delay: .5s;
   cursor: crosshair;
   width: 75%;
@@ -176,7 +177,7 @@ section img:hover{
 }
 
 /*Quita lo feo de los links*/
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -184,7 +185,115 @@ a{
 
 /*grid seccion para horarios*/
 
-.grid{
+.grid {
   grid-template-columns: 3fr;
   background-color: #1b5e20;
+}
+
+
+/*Seccion de horarios*/
+
+.form1 {
+  padding: 10px;
+}
+
+.lblhorario {
+  font-size: 36px;
+}
+
+section{
+  margin: 20px;
+}
+
+.seccion_horarios {
+  display: grid; 
+  grid-template-columns: 1fr 3fr 2fr; 
+  grid-template-rows: auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "ingresagrupo horariodado horariodado"
+    "ingresagrupo horariodado horariodado"
+    "equis equis equis"; 
+}
+
+.ingresagrupo { 
+  grid-area: ingresagrupo; 
+  border-style: solid;
+  border-color: #2f8b36;
+  margin: 8px;
+  background-color: #f3fdef;
+}
+
+.horariodado {
+  grid-area: horariodado; 
+  border-style: solid;
+  border-color: #2f8b36;
+  margin: 8px;
+  background-color: #f3fdef;
+}
+
+.equis { 
+  grid-area: equis; 
+  background-color: #989595;
+  border-style: solid;
+  border-color: #2f8b36;
+  border-radius: 15px;
+  margin: 8px;
+  background-color: #f3fdef;
+}
+
+/*input style*/
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #000000;
+  font-size: 18px;
+  border: 1px solid #2f8b36;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #535353;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #2f8b36;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.button--submit:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #2f8b36;
+}
+
+.button--submit:active {
+  transform: scale(0.9);
+}
+
+.input:focus-visible {
+  border-color: #2f8b36;
+  outline: none;
+}
+
+/*seccion ver horario*/
+
+.horariodado{
+  background-color: #a1a1a1;
 }
