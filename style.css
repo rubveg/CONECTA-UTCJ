@@ -5,7 +5,6 @@ body {
   overflow-x: hidden; /* Evita scroll horizontal */
   margin: 0 auto; /* Centra contenido */
 }
-}
 
 .desktop {
   display: flex;
@@ -236,12 +235,19 @@ a {
 
 .equis { 
   grid-area: equis; 
-  background-color: #989595;
   border-style: solid;
   border-color: #2f8b36;
   border-radius: 15px;
   margin: 8px;
-  background-color: #f3fdef;
+  overflow: hidden; 
+}
+
+/* NUEVO: Estilo específico para la imagen */
+.equis .img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Clave: Recorta la imagen para llenar sin deformar */
+  display: block; /* Elimina espacios extra abajo de la imagen */
 }
 
 /*input style*/
