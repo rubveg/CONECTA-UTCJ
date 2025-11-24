@@ -228,8 +228,8 @@ a {
   grid-area: horariodado; 
   border-style: solid;
   border-color: #2f8b36;
-  margin: 8px;
   background-color: #f3fdef;
+  margin: 8px;
   border-radius: 15px;
 }
 
@@ -300,8 +300,255 @@ a {
   outline: none;
 }
 
-/*seccion ver horario*/
-
-.horariodado{
-  background-color: #a1a1a1;
+/* CONTENEDOR */
+.cafeteria-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffffcc;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  border-left: 8px solid #1b5e20;
 }
+
+/* TÍTULO */
+.cafeteria-container h2 {
+  text-align: center;
+  color: #2f8b36;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.form-menu label {
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.form-menu select {
+  padding: 8px 12px;
+  border: 2px solid #2f8b36;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-menu select:focus {
+  border-color: #CBA135;
+}
+
+.form-menu button {
+  background: #2f8b36;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.form-menu button:hover {
+  background: #CBA135;
+  color: #1b5e20;
+}
+
+.form-menu {
+  display: flex;
+  align-items: center;   /* 🔥 Centra verticalmente el label, select y botón */
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.form-menu label{
+  margin: 36px;
+}
+
+/* TABLA */
+.tabla-menu table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.tabla-menu th {
+  background: #0F3D20;
+  color: white;
+  padding: 12px;
+}
+
+.tabla-menu td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Filas alternadas */
+.tabla-menu tbody tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+/* Hover */
+.tabla-menu tbody tr:hover {
+  background: #CBA13533;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .form-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-menu button {
+    width: 100%;
+  }
+}
+
+/* CONTENEDOR */
+.contenedor-horario {
+  padding: 20px;
+}
+
+/* SELECTOR */
+.selector-turno {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.selector-turno select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid #2f8b36;
+  background-color: #f3fdef;
+  cursor: pointer;
+}
+
+/* TABLA */
+.tabla-horario {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.tabla-horario thead {
+  background-color: #1b5e20;
+  color: white;
+}
+
+.tabla-horario th, 
+.tabla-horario td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2f8b36;
+  font-size: 18px;
+}
+
+/* FILA HOVER */
+.tabla-horario tbody tr:hover {
+  background-color: #ffd70033;
+  transition: 0.3s ease-in-out;
+}
+
+/* CELDA HOVER */
+.tabla-horario td:hover {
+  background-color: #ffd70055;
+  cursor: pointer;
+}
+
+/* PRIMERA COLUMNA */
+.tabla-horario td:first-child {
+  background-color: #f3fdef;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.contenedor-horario {
+  padding: 20px;
+}
+
+/* SELECTOR DE TURNO */
+.selector-turno {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.selector-turno select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid #2f8b36;
+  background-color: #f3fdef;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* TABLA DE HORARIO */
+.tabla-horario {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* CABECERA */
+.tabla-horario thead tr {
+  background-color: #1b5e20;
+  color: white;
+}
+
+.tabla-horario th {
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #2f8b36;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CUERPO */
+.tabla-horario td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2f8b36;
+  font-size: 17px;
+}
+
+/* HOVER EN FILAS */
+.tabla-horario tbody tr:hover {
+  background-color: #ffd70033;
+  transition: 0.3s ease-in-out;
+}
+
+/* HOVER EN CELDAS */
+.tabla-horario td:hover {
+  background-color: #ffd70055;
+  cursor: pointer;
+}
+
+/* COLUMNA HORA DISTINGUIDA */
+.tabla-horario td:first-child {
+  background-color: #f3fdef;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
