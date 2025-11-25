@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-    <link rel="preload" href="style.css" as="style" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="desktop">
-			<div class="HOME">
-				<img class="ellipse2" src="images/ruriva2.PNG">
-				<img class="ellipse" src="images/conectautcj2.PNG">
-				<div class="text-wrapper-conecta">
-					<a href="index.html">Conecta UTCJ</a>
-				</div>
-				<div class="text-wrapper-3-mapa">
-					<a href="mapa.html">Mapa UTCJ</a>
-				</div>
-				<div class="text-wrapper-4-horarios">
-					<a href="horarios.html">Horarios</a>
-				</div>
-				<div class="text-wrapper-5-comunidad">
-					<a href="comunidad.html">Comunidad</a>
-				</div>
-				<div class="text-wrapper-6-menu">
-					<a href="menu.html">Menu cafeteria</a>
-				</div>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<link rel="preload" href="style.css" as="style" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="desktop">
+		<div class="HOME">
+			<img class="ellipse2" src="images/ruriva2.PNG">
+			<img class="ellipse" src="images/conectautcj2.PNG">
+			<div class="text-wrapper-conecta">
+				<a href="index.html">Conecta UTCJ</a>
 			</div>
-			<section class="cafeteria-container">
-				<h2>Menú de Cafetería</h2>
-				<form action="consultar_menu.php" method="GET" class="form-menu">
-					<label for="turno">Seleccione turno:</label>
-					<select id="turno" name="turno" required>
-						<option value="">-- Elige turno --</option>
-						<option value="Matutino">Matutino</option>
-						<option value="Vespertino">Vespertino</option>
-					</select>
-					<button type="submit">Consultar</button>
-				</form>
-			</section>
-			<div class="frame-fotter">
-				<div class="frame-2fotter">
-					<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
-				</div>
+			<div class="text-wrapper-3-mapa">
+				<a href="mapa.html">Mapa UTCJ</a>
+			</div>
+			<div class="text-wrapper-4-horarios">
+				<a href="horarios.html">Horarios</a>
+			</div>
+			<div class="text-wrapper-5-comunidad">
+				<a href="comunidad.html">Comunidad</a>
+			</div>
+			<div class="text-wrapper-6-menu">
+				<a href="menu.html">Menu cafeteria</a>
 			</div>
 		</div>
-	</body>
+		<section class="cafeteria-container">
+			<h2>Menú de Cafetería</h2>
+			<form action="consultar_menu.php" method="GET" class="form-menu">
+
+				<label for="dia">Seleccione día:</label>
+				<select id="dia" name="dia" required>
+					<option value="">-- Día --</option>
+					<option value="Lunes">Lunes</option>
+					<option value="Martes">Martes</option>
+					<option value="Miércoles">Miércoles</option>
+					<option value="Jueves">Jueves</option>
+					<option value="Viernes">Viernes</option>
+					<option value="Sábado">Sábado</option>
+					<option value="Domingo">Domingo</option>
+				</select>
+
+				<label for="turno">Seleccione turno:</label>
+				<select id="turno" name="turno" required>
+					<option value="">-- Turno --</option>
+					<option value="Matutino">Matutino</option>
+					<option value="Vespertino">Vespertino</option>
+				</select>
+
+				<button type="submit">Consultar</button>
+			</form>
+		</section>
+		<div class="frame-fotter">
+			<div class="frame-2fotter">
+				<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>

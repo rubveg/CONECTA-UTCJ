@@ -1,10 +1,12 @@
 <?php
-$conexion = new mysqli(
-    "localhost",
-    "conectautcj",
-    "",
-    "Conectautcj12!"
-);
+$host = "localhost";       // Servidor
+$usuario = "conecta";         // Usuario de phpMyAdmin
+$clave = "";               // Contraseña (vacía en XAMPP)
+$bd = "kiosco_utcj";       // Nombre de tu base de datos
 
-$conexion->set_charset("utf8");
+$conexion = new mysqli($host, $usuario, $clave, $bd);
+
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
 ?>
