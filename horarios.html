@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-    <link rel="preload" href="style.css" as="style" />
-		<link rel="stylesheet" href="globals.css" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="desktop">
-			<div class="HOME">
-				<img class="ellipse2" src="images/ruriva2.PNG">
-				<img class="ellipse" src="images/conectautcj2.PNG">
-				<div class="text-wrapper-conecta">
-					<a href="index.html">Conecta UTCJ</a>
-				</div>
-				<div class="text-wrapper-3-mapa">
-					<a href="mapa.html">Mapa UTCJ</a>
-				</div>
-				<div class="text-wrapper-4-horarios">
-					<a href="horarios.html">Horarios</a>
-				</div>
-				<div class="text-wrapper-5-comunidad">
-					<a href="comunidad.html">Comunidad</a>
-				</div>
-				<div class="text-wrapper-6-menu">
-					<a href="menu.html">Menu cafeteria</a>
-				</div>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<link rel="preload" href="style.css" as="style" />
+	<link rel="stylesheet" href="globals.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<script src="horarios.js"></script>
+
+<body>
+	<div class="desktop">
+		<div class="HOME">
+			<img class="ellipse2" src="images/ruriva2.PNG">
+			<img class="ellipse" src="images/conectautcj2.PNG">
+			<div class="text-wrapper-conecta">
+				<a href="index.html">Conecta UTCJ</a>
 			</div>
-			<div class="frame-fotter">
-				<div class="frame-2fotter"></div>
-				<section>
-					<div class="seccion_horarios">
-						<div class="ingresagrupo">
-							<form class="form1">
+			<div class="text-wrapper-3-mapa">
+				<a href="mapa.html">Mapa UTCJ</a>
+			</div>
+			<div class="text-wrapper-4-horarios">
+				<a href="horarios.html">Horarios</a>
+			</div>
+			<div class="text-wrapper-5-comunidad">
+				<a href="comunidad.html">Comunidad</a>
+			</div>
+			<div class="text-wrapper-6-menu">
+				<a href="menu.html">Menu cafeteria</a>
+			</div>
+		</div>
+		<div class="frame-fotter">
+			<div class="frame-2fotter"></div>
+			<section>
+				<div class="seccion_horarios">
+					<div class="ingresagrupo">
+						
+							<form id="formHorario" class="form1">
 								<div class="input-group">
-									<input type="text" class="input" id="Email" name="Email" placeholder="Ejemplo: DSW31">
-									<input class="button--submit" value="Buscar horario" type="submit">
-								</div>
-							</form>
-						</div>
-						<div class="horariodado">
-							<div class="contenedor-horario">
-								<div class="selector-turno">
-									<label for="turno">Turno:</label>
-									<select id="turno">
+
+									<!-- SELECT DEL TURNO -->
+									<select id="turno" class="input">
+										<option value="" disabled selected>Turno</option>
 										<option value="mañana">Mañana</option>
 										<option value="tarde">Tarde</option>
 									</select>
+
+									<!-- INPUT DEL GRUPO -->
+									<input type="text" class="input" id="grupo" placeholder="Ejemplo: DSW31">
+
+									<!-- BOTÓN -->
+									<button type="submit" class="button--submit">Buscar Horario</button>
 								</div>
-								<div id="resultado-horario"></div>
-							</div>
-						</div>
-						<div class="equis">
-							<img class="img1" src="images/img1.png" alt="UTCJ" />
-						</div>
+							</form>
 					</div>
-				</section>
-				<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
-			</div>
+
+					<div class="horariodado">
+							<div class="contenedor-horario" id="resultado-horario"></div>
+					</div>
+
+					<div class="equis">
+						<img class="img1" src="images/img1.png" alt="UTCJ" />
+					</div>
+				</div>
+			</section>
+			<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
