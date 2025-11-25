@@ -1,6 +1,6 @@
 <?php
 // CONEXIÓN A BASE DE DATOS
-$conexion = new mysqli("localhost", "root", "", "conectautcj");
+$conexion = new mysqli("localhost", "conectautcj", "", "Conectautcj12!");
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);

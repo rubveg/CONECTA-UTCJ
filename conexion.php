@@ -1,9 +1,9 @@
 <?php
 $conexion = new mysqli(
     "localhost",
-    "root",
+    "conectautcj",
     "",
-    "kiosco_utcj"
+    "Conectautcj12!"
 );
 
 $conexion->set_charset("utf8");
