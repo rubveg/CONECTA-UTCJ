@@ -298,255 +298,139 @@ a {
   outline: none;
 }
 
-/* CONTENEDOR */
-.cafeteria-container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 40px auto;
-  background: #ffffffcc;
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
-  border-left: 8px solid #1b5e20;
-}
-
-/* TÍTULO */
-.cafeteria-container h2 {
-  text-align: center;
-  color: #2f8b36;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* FORM */
-.form-menu {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.form-menu label {
-  font-weight: bold;
-  color: #1b5e20;
-}
-
-.form-menu select {
-  padding: 8px 12px;
-  border: 2px solid #2f8b36;
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-}
-
-.form-menu select:focus {
-  border-color: #CBA135;
-}
-
-.form-menu button {
-  background: #2f8b36;
-  color: white;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-.form-menu button:hover {
-  background: #CBA135;
-  color: #1b5e20;
-}
-
-.form-menu {
-  display: flex;
-  align-items: center;   /* 🔥 Centra verticalmente el label, select y botón */
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.form-menu label{
-  margin: 36px;
-}
-
-/* TABLA */
-.tabla-menu table {
+.menu-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.titulo-menu {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #2f8b36;
+}
+
+.tabla-menu {
+  width: 85%;
   border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0px 5px 12px rgba(0,0,0,.2);
   font-size: 18px;
 }
 
 .tabla-menu th {
-  background: #0F3D20;
-  color: white;
+  background-color: #2f8b36;
+  color: #fff;
   padding: 12px;
 }
 
 .tabla-menu td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabla-menu tr:nth-child(even) {
+  background-color: #f4f7f6;
+}
+
+.tabla-menu tr:hover {
+  background-color: #d4e8db;
+}
+
+.contenedor-horario {
+  width: 100%;
+  padding: 15px;
+}
+
+.contenedor-horario table th,
+.contenedor-horario table td {
+  border: 1px solid #2f8b36;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.contenedor-horario h2 {
+  color: #2f8b36;
+}
+.horariodado {
+  overflow-x: auto;    /* Evita que se desborde */
+  max-width: 100%;
+  box-sizing: border-box; 
+}
+
+.contenedor-horario {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Filas alternadas */
-.tabla-menu tbody tr:nth-child(even) {
-  background: #f3f3f3;
-}
-
-/* Hover */
-.tabla-menu tbody tr:hover {
-  background: #CBA13533;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-  .form-menu {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .form-menu button {
-    width: 100%;
-  }
-}
-
-/* CONTENEDOR */
-.contenedor-horario {
-  padding: 20px;
-}
-
-/* SELECTOR */
-.selector-turno {
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1b5e20;
-}
-
-.selector-turno select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 2px solid #2f8b36;
-  background-color: #f3fdef;
-  cursor: pointer;
-}
-
-/* TABLA */
-.tabla-horario {
+.contenedor-horario table {
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed; /* Clave para que no se salga */
+  word-wrap: break-word;
   border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: white;
 }
 
-.tabla-horario thead {
-  background-color: #1b5e20;
-  color: white;
-}
-
-.tabla-horario th, 
-.tabla-horario td {
-  padding: 12px;
+.contenedor-horario th,
+.contenedor-horario td {
+  font-size: 13px;
+  padding: 6px;
   text-align: center;
-  border: 1px solid #2f8b36;
-  font-size: 18px;
+  word-break: break-word;
 }
 
-/* FILA HOVER */
-.tabla-horario tbody tr:hover {
-  background-color: #ffd70033;
-  transition: 0.3s ease-in-out;
-}
-
-/* CELDA HOVER */
-.tabla-horario td:hover {
-  background-color: #ffd70055;
-  cursor: pointer;
-}
-
-/* PRIMERA COLUMNA */
-.tabla-horario td:first-child {
-  background-color: #f3fdef;
+.programacion {
+  background-color: #c8e6c9;
   font-weight: bold;
-  color: #1b5e20;
 }
 
-/* CONTENEDOR DEL FORMULARIO */
-.contenedor-horario {
-  padding: 20px;
+.basedatos {
+  background-color: #bbdefb;
 }
 
-/* SELECTOR DE TURNO */
-.selector-turno {
-  margin-bottom: 15px;
-  font-size: 20px;
+.redes {
+  background-color: #ffe0b2;
+}
+
+.mate {
+  background-color: #f8bbd0;
+}
+
+.ingles {
+  background-color: #d1c4e9;
+}
+
+.socio {
+  background-color: #fff9c4;
+}
+
+.sistemas {
+  background-color: #b2dfdb;
+}
+
+.tutorias {
+  background-color: #e0e0e0;
+}
+
+.proyecto {
+  background-color: #cfd8dc;
   font-weight: bold;
-  color: #1b5e20;
 }
 
-.selector-turno select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 2px solid #2f8b36;
-  background-color: #f3fdef;
-  cursor: pointer;
-  font-size: 18px;
+.evento {
+  background-color: #ffccbc;
 }
 
-/* TABLA DE HORARIO */
-.tabla-horario {
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.contenedor-horario td {
+  transition: background-color 0.3s;
 }
 
-/* CABECERA */
-.tabla-horario thead tr {
-  background-color: #1b5e20;
-  color: white;
+.contenedor-horario td:hover {
+  filter: brightness(0.9);
 }
-
-.tabla-horario th {
-  padding: 12px;
-  font-size: 18px;
-  border: 1px solid #2f8b36;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* CUERPO */
-.tabla-horario td {
-  padding: 12px;
-  text-align: center;
-  border: 1px solid #2f8b36;
-  font-size: 17px;
-}
-
-/* HOVER EN FILAS */
-.tabla-horario tbody tr:hover {
-  background-color: #ffd70033;
-  transition: 0.3s ease-in-out;
-}
-
-/* HOVER EN CELDAS */
-.tabla-horario td:hover {
-  background-color: #ffd70055;
-  cursor: pointer;
-}
-
-/* COLUMNA HORA DISTINGUIDA */
-.tabla-horario td:first-child {
-  background-color: #f3fdef;
-  font-weight: 600;
-  color: #1b5e20;
-}
-

@@ -8,6 +8,62 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 
+<script>
+	const menus = {
+		"Lunes": [
+			["Burritos de deshebrada", 45, "Agua de jamaica", 15],
+			["Quesadillas", 40, "Refresco", 20],
+			["Hot dogs", 35, "Café", 15]
+		],
+		"Martes": [
+			["Hamburguesa clásica", 50, "Refresco", 20],
+			["Chilaquiles rojos", 45, "Agua natural", 12],
+			["Molletes", 40, "Café", 15]
+		],
+		"Miércoles": [
+			["Tacos dorados", 45, "Agua de horchata", 15],
+			["Quesadillas", 40, "Refresco", 20],
+			["Hot dogs", 35, "Café", 15]
+		],
+		"Jueves": [
+			["Hamburguesa especial", 55, "Refresco", 20],
+			["Burritos de frijol", 40, "Agua natural", 12],
+			["Chilaquiles verdes", 45, "Café", 15]
+		],
+		"Viernes": [
+			["Sincronizadas", 45, "Agua de limón", 15],
+			["Tortas", 40, "Refresco", 20],
+			["Hot cakes", 35, "Leche", 15]
+		]
+	};
+
+	// Obtener día actual
+	const dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+	const hoy = new Date().getDay();
+	const diaActual = dias[hoy];
+
+	// Mostrar día
+	document.getElementById("diaActual").textContent = "Menú del día: " + diaActual;
+
+	// Insertar menú
+	const cuerpo = document.getElementById("menuTabla");
+
+	if (menus[diaActual]) {
+		menus[diaActual].forEach(plato => {
+			const fila = document.createElement("tr");
+			fila.innerHTML = `
+      <td>${plato[0]}</td>
+      <td>$${plato[1]}</td>
+      <td>${plato[2]}</td>
+      <td>$${plato[3]}</td>
+    `;
+			cuerpo.appendChild(fila);
+		});
+	} else {
+		cuerpo.innerHTML = "<tr><td colspan='4'>Hoy no hay menú (domingo santo)</td></tr>";
+	}
+</script>
+
 <body>
 	<div class="desktop">
 		<div class="HOME">
@@ -29,36 +85,63 @@
 				<a href="menu.html">Menu cafeteria</a>
 			</div>
 		</div>
-		<section class="cafeteria-container">
-			<h2>Menú de Cafetería</h2>
-			<form action="consultar_menu.php" method="GET" class="form-menu">
-
-				<label for="dia">Seleccione día:</label>
-				<select id="dia" name="dia" required>
-					<option value="">-- Día --</option>
-					<option value="Lunes">Lunes</option>
-					<option value="Martes">Martes</option>
-					<option value="Miércoles">Miércoles</option>
-					<option value="Jueves">Jueves</option>
-					<option value="Viernes">Viernes</option>
-					<option value="Sábado">Sábado</option>
-					<option value="Domingo">Domingo</option>
-				</select>
-
-				<label for="turno">Seleccione turno:</label>
-				<select id="turno" name="turno" required>
-					<option value="">-- Turno --</option>
-					<option value="Matutino">Matutino</option>
-					<option value="Vespertino">Vespertino</option>
-				</select>
-
-				<button type="submit">Consultar</button>
-			</form>
-		</section>
 		<div class="frame-fotter">
-			<div class="frame-2fotter">
-				<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
+			<div class="frame-2fotter"></div>
+			<div class="menu-container">
+				<h2 class="titulo-menu">Menú semanal de la cafetería</h2>
+
+				<table class="tabla-menu">
+					<thead>
+						<tr>
+							<th>Día</th>
+							<th>Platillo</th>
+							<th>Precio</th>
+							<th>Bebida</th>
+							<th>Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lunes</td>
+							<td>Burritos de deshebrada</td>
+							<td>$45</td>
+							<td>Agua de jamaica</td>
+							<td>$15</td>
+						</tr>
+						<tr>
+							<td>Martes</td>
+							<td>Hamburguesa clásica</td>
+							<td>$50</td>
+							<td>Refresco</td>
+							<td>$20</td>
+						</tr>
+						<tr>
+							<td>Miércoles</td>
+							<td>Quesadillas</td>
+							<td>$40</td>
+							<td>Agua de horchata</td>
+							<td>$15</td>
+						</tr>
+						<tr>
+							<td>Jueves</td>
+							<td>Chilaquiles verdes</td>
+							<td>$45</td>
+							<td>Café</td>
+							<td>$15</td>
+						</tr>
+						<tr>
+							<td>Viernes</td>
+							<td>Hot dogs</td>
+							<td>$35</td>
+							<td>Refresco</td>
+							<td>$20</td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
+
+			<p class="p">© 2025 Universidad Tecnológica de Ciudad Juárez</p>
 		</div>
 	</div>
 </body>
